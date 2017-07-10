@@ -1,0 +1,11 @@
+<h2>{{vm.title}}</h2>
+<ul>
+  <li ng-repeat="phone in vm.phones" class="phone-list-item">
+    <phone-item
+      title="phone.name"
+      description="phone.snippet"
+      delete="vm.onRemoveItem($index)"
+      ></phone-item>
+  </li>
+</ul>
+<new-item add="vm.addItem"></new-item>
